@@ -20,5 +20,5 @@ go run ./cmd/tinycloud
 ```
 
 Docker must be installed and available on `PATH`. Use `n` to add an app, `d`
-to deploy the selected app, `l` to view logs, `s` to stop it, and `q` to quit.
-
+to deploy the selected app, `l` to view logs, `s` to stop it without removing
+the container, and `q` to quit.
