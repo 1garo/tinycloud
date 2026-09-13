@@ -35,7 +35,7 @@ func (Docker) Deploy(ctx context.Context, sourceDir, image, containerName, port 
 }
 
 func (Docker) Stop(ctx context.Context, containerName string) error {
-	output, err := run(ctx, "", "docker", "rm", "-f", containerName)
+	output, err := run(ctx, "", "docker", "stop", containerName)
 	if err != nil && !strings.Contains(output, "No such container") {
 		return fmt.Errorf("stop container: %w: %s", err, output)
 	}
